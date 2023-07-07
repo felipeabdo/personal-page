@@ -1,0 +1,82 @@
+<div class="content">
+
+  <aside id="left">
+
+    <ul>
+
+      <li id="profile-pic" class="nav-item no-click no-triangle">
+
+        <%= image_tag "profile.jpg", alt: "Profile Picture", width: 155 %>
+
+      </li>
+
+      <%# <form id="my-form" method="post" action="/sua_rota_de_destino">
+        <input type="hidden" id="my-value" name="my_value">
+      </form> %>
+
+
+        <%= link_to 'http://www.google.com', target: "_blank" do %>
+          <%= content_tag :li, class: "nav-item about" do %>
+            <%= content_tag :i, "", class: "fa-solid fa-briefcase" %>
+            <%= content_tag :h4, "ABOUT ME" %>
+            <%= content_tag :p, "WHO I AM" %>
+          <% end %>
+        <% end %>
+
+
+      <li class="nav-item resume">
+      <%= link_to root_path(view: 'resume') do %>
+      <i class="fa-solid fa-briefcase"></i>
+      <h4>RESUME</h4>
+      <p>Curriculum Vitae</p>
+      <% end %>
+      </li>
+
+      <%= link_to "#" do %>
+        <%= content_tag :li, class: "nav-item portfolio" do %>
+          <%= content_tag :i, "", class: "fa-solid fa-briefcase" %>
+          <%= content_tag :h4, "PORTFOLIO" %>
+          <%= content_tag :p, "MY WORKS" %>
+        <% end %>
+      <% end %>
+
+      <%= link_to "#" do %>
+        <%= content_tag :li, class: "nav-item blog" do %>
+          <%= content_tag :i, "", class: "fa-solid fa-briefcase" %>
+          <%= content_tag :h4, "BLOG" %>
+          <%= content_tag :p, "MY TOUGHTS" %>
+        <% end %>
+      <% end %>
+
+      <%= link_to "#" do %>
+        <%= content_tag :li, class: "nav-item contact" do %>
+          <%= content_tag :i, "", class: "fa-solid fa-briefcase" %>
+          <%= content_tag :h4, "CONTACT" %>
+          <%= content_tag :p, "SAY HELLO" %>
+        <% end %>
+      <% end %>
+
+    </ul>
+
+  </aside>
+
+
+ <div id="content-container">
+   <h1>oi</h1>
+   <% if @view == 'about' %>
+      <%= render partial: "_about" %>
+   <% elsif @view == 'resume' %>
+      <%= render "pages/resume" %>
+   <% elsif @view == 'portfolio' %>
+      <%= render "pages/portfolio" %>
+   <% elsif @view == 'blog' %>
+      <%= render "pages/blog" %>
+   <% elsif @view == 'contact' %>
+      <%= render "pages/contact" %>
+   <% end %>
+ </div>
+
+
+  <aside></aside>
+
+</div>
