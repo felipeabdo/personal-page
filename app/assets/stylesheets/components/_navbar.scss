@@ -1,7 +1,7 @@
 #left {
   position: absolute;
-  top:0;
-  left: -132px;
+  top: 0;
+  left: -156px;
 }
 
 .nav-item {
@@ -33,6 +33,7 @@ li {
   background-size: 200% 100%;
   background-position: right;
   transition: background-position 0.5s, background-color 0.5s;
+  cursor:pointer;
 }
 
 li.active {

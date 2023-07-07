@@ -1,28 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
   const listItems = document.querySelectorAll("ul li");
 
-  let selectedItem = document.querySelector(".nav-item");
-
-  selectedItem.classList.add("active");
+  let selectedPartial = document.getElementById("about-page");
 
   listItems.forEach((item) => {
     item.addEventListener("click", (event) => {
       event.preventDefault();
-    
-      if (selectedItem !== null) {
-        selectedItem.classList.remove("active");
-        selectedItem.style.zIndex = ""; // Remover z-index da li anteriormente selecionada
 
-      }
-      selectedItem = item;
-      selectedItem.classList.add("active");
-      selectedItem.style.zIndex = "1"; // Atribuir z-index à li selecionada
+      const clickedPartialId = item.classList[1];
+      const clickedPartial = document.getElementById(`${clickedPartialId}-page`);
+
+      selectedPartial.style.display = "none"; // Oculta a partial anterior
+      clickedPartial.style.display = "block"; // Exibe a partial clicada
+
+      selectedPartial = clickedPartial;
+
       listItems.forEach((li) => {
-        if (li !== selectedItem) {
-          li.classList.remove("active");
-          li.style.zIndex = ""; // Remover z-index das outras li's
-        }
+        li.classList.remove("active");
       });
+
+      item.classList.add("active");
     });
   });
+
+  // Adiciona a classe "active" à segunda <li> (li.about) quando a página for carregada
+  const aboutLi = document.querySelector("ul li.about");
+  aboutLi.classList.add("active");
 });

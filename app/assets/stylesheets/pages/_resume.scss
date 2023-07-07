@@ -1,0 +1,22 @@
+#resume-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px;
+}
+#resume-title {
+  text-align: center;
+  margin-bottom: 85px;
+}
+
+#resume-title h1 {
+  font-family: Roboto Slab;
+  font-size: 55px;
+}
+
+#resume-title p {
+  font-family: Roboto Slab;
+  font-size: 20px;
+  font-weight: 300;
+  color: rgba(110, 110, 110, 0.792);
+}

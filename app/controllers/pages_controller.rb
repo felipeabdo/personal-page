@@ -1,7 +1,6 @@
 class PagesController < ApplicationController
   def home
     @view = params[:view] || 'home'
-    raise unless @view == 'home'
   end
 
   # def about
