@@ -1,67 +1,116 @@
-<div class="content">
+<%= content_tag :div, class: "content" do %>
 
-  <aside id="left">
+  <%= content_tag :aside, id: "left" do %>
 
-    <ul>
+    <%= content_tag :ul do %>
 
-      <li id="profile-pic" class="nav-item no-click no-triangle">
-
+      <%= content_tag :li, class: "nav-item no-click no-triangle", id:"profile-pic" do %>
         <%= image_tag "profile.jpg", alt: "Profile Picture", width: 155 %>
+        <%= content_tag :div, "Felipe Barroso Abdo", class: "name-profile uppercase" %>
+      <% end %>
 
-      </li>
+      <%= content_tag :li, class: "nav-item about" do %>
+        <%= content_tag :i, "", class: "fa-solid fa-briefcase" %>
+        <%= content_tag :h4, "ABOUT ME" %>
+        <%= content_tag :p, "WHO I AM" %>
+      <% end %>
 
-          <%= content_tag :li, class: "nav-item about" do %>
-            <%= content_tag :i, "", class: "fa-solid fa-briefcase" %>
-            <%= content_tag :h4, "ABOUT ME" %>
-            <%= content_tag :p, "WHO I AM" %>
+      <%= content_tag :li, class: "nav-item resume" do %>
+        <%= content_tag :i, "", class: "fa-solid fa-briefcase" %>
+        <%= content_tag :h4, "RESUME" %>
+        <%= content_tag :p, "CURRICULUM VITAE" %>
+      <% end %>
+
+      <%= content_tag :li, class: "nav-item portfolio" do %>
+        <%= content_tag :i, "", class: "fa-solid fa-briefcase" %>
+        <%= content_tag :h4, "PORTFOLIO" %>
+        <%= content_tag :p, "MY WORKS" %>
+      <% end %>
+
+      <%= content_tag :li, class: "nav-item blog" do %>
+        <%= content_tag :i, "", class: "fa-solid fa-briefcase" %>
+        <%= content_tag :h4, "BLOG" %>
+        <%= content_tag :p, "MY TOUGHTS" %>
+      <% end %>
+
+      <%= content_tag :li, class: "nav-item contact" do %>
+        <%= content_tag :i, "", class: "fa-solid fa-briefcase" %>
+        <%= content_tag :h4, "CONTACT" %>
+        <%= content_tag :p, "SAY HELLO" %>
+      <% end %>
+
+    <% end %>
+
+  <% end %>
+
+  <%= content_tag :div, id: "content-container" do %>
+
+      <%= content_tag :div, id: "about-page" do %>
+        <%= render partial: "about"%>
+      <% end %>
+
+      <%= content_tag :div, id: "resume-page" do %>
+        <%= render partial: "resume"%>
+      <% end %>
+
+      <%= content_tag :div, id: "portfolio-page" do %>
+        <%= render partial: "portfolio"%>
+      <% end %>
+
+      <%= content_tag :div, id: "blog-page" do %>
+        <%= render partial: "blog"%>
+      <% end %>
+
+      <%= content_tag :div, id: "contact-page" do %>
+        <%= render partial: "contact"%>
+      <% end %>
+
+  <% end %>
+
+  <%= content_tag :aside, id: "right" do %>
+
+    <%= content_tag :ul do %>
+
+
+
+      <%= content_tag :li, class:"sn-box" do %>
+        <%= link_to 'https://www.facebook.com/felipe.abdo', target: '_blank' do %>
+          <%= content_tag :div do %>
+            <i class="fa-brands fa-facebook-f fa-sm"></i>
           <% end %>
-
-
-        <%= content_tag :li, class: "nav-item resume" do %>
-          <%= content_tag :i, "", class: "fa-solid fa-briefcase" %>
-          <%= content_tag :h4, "RESUME" %>
-          <%= content_tag :p, "CURRICULUM VITAE" %>
         <% end %>
+      <% end %>
 
-
-        <%= content_tag :li, class: "nav-item portfolio" do %>
-          <%= content_tag :i, "", class: "fa-solid fa-briefcase" %>
-          <%= content_tag :h4, "PORTFOLIO" %>
-          <%= content_tag :p, "MY WORKS" %>
+      <%= content_tag :li, class:"sn-box" do %>
+        <%= link_to 'https://twitter.com/felipeabdo', target: '_blank' do %>
+          <%= content_tag :div do %>
+            <i class="fa-brands fa-twitter fa-sm"></i>
+          <% end %>
         <% end %>
+      <% end %>
 
-
-
-        <%= content_tag :li, class: "nav-item blog" do %>
-          <%= content_tag :i, "", class: "fa-solid fa-briefcase" %>
-          <%= content_tag :h4, "BLOG" %>
-          <%= content_tag :p, "MY TOUGHTS" %>
+      <%= content_tag :li, class:"sn-box" do %>
+        <%= link_to 'https://www.linkedin.com/in/felipeabdo/', target: '_blank' do %>
+          <%= content_tag :div do %>
+            <i class="fa-brands fa-linkedin-in fa-sm"></i>
+          <% end %>
         <% end %>
+      <% end %>
 
-
-
-        <%= content_tag :li, class: "nav-item contact" do %>
-          <%= content_tag :i, "", class: "fa-solid fa-briefcase" %>
-          <%= content_tag :h4, "CONTACT" %>
-          <%= content_tag :p, "SAY HELLO" %>
+      <%= content_tag :li, class:"sn-box" do %>
+        <%= link_to 'https://github.com/felipeabdo', target: '_blank' do %>
+          <%= content_tag :div do %>
+            <i class="fa-brands fa-github fa-sm"></i>
+          <% end %>
         <% end %>
+      <% end %>
 
+      <%= content_tag :li, class:"sn-box uppercase" do %>
+        © 2023 felipe barroso abdo.
+      <% end %>
 
-    </ul>
+    <% end %>
 
-  </aside>
+  <% end %>
 
- <div id="content-container">
-
-      <div id="about-page"><%= render partial: "about"%></div>
-      <div id="resume-page" ><%= render partial: "resume"%></div>
-      <div id="portfolio-page"><%= render partial: "portfolio"%></div>
-      <div id="blog-page"><%= render partial: "blog"%></div>
-      <div id="contact-page" ><%= render partial: "contact"%></div>
-
- </div>
-
-
-  <aside></aside>
-
-</div>
+<% end %>

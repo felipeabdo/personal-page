@@ -24,6 +24,23 @@ ul a {
   color: black;
 }
 
+#profile-pic {
+  height: 187px;
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.name-profile {
+  font-family: Roboto Slab;
+  height: 31px;
+  width: 100%;
+  color: #e8e8e8;
+  background-color: #3F3F3F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 li {
   position: relative;
   width: 100px;

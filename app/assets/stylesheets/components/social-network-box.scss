@@ -1,0 +1,30 @@
+li {
+  position: relative;
+  background-color: #ffd42d;
+}
+
+
+li.sn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li.sn-box:not(:last-child) {
+  width: 40px;
+  height: 40px;
+  background: #ffd42d;
+  margin-bottom: 1px;
+}
+
+li.sn-box:last-child {
+  width: 40px;
+  min-height: 206px;
+  background: #000000;
+  margin-bottom: 1px;
+  font-size: 10px;
+  font-weight: 900;
+  writing-mode: vertical-rl;
+  color: rgba(255, 255, 255, 0.934);
+  cursor: default;
+}

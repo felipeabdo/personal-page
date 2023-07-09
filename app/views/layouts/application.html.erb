@@ -1,16 +1,25 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>PersonalPage</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+<%= raw('<!DOCTYPE html>') %>
+<%= content_tag :html, lang: "pt-br" do %>
+
+<%= content_tag :html do %>
+
+  <%= content_tag :head do %>
+
+    <%= content_tag :title, "Personal Page" do %> <% end %>
+    <%= tag.meta name: "viewport", content: "width=device-width,initial-scale=1" %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= favicon_link_tag 'favicon.png' %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-  </head>
 
-  <body>
-    <%= yield %>
-  </body>
-</html>
+  <% end %>
+
+  <%= content_tag :body do %>
+
+    <%= yield %> <% end %>
+
+  <% end %>
+
+<% end %>
