@@ -31,7 +31,7 @@ ul a {
 }
 
 .name-profile {
-  font-family: Roboto Slab;
+  font-family: 'Roboto Slab';
   height: 31px;
   width: 100%;
   color: #e8e8e8;
@@ -50,61 +50,61 @@ li {
   background-size: 200% 100%;
   background-position: right;
   transition: background-position 0.5s, background-color 0.5s;
-  cursor:pointer;
-}
+  cursor: pointer;
 
-li.active {
-  background-position: left;
-  background-color: #FFD42D;
-}
+  &.active {
+    background-position: left;
+    background-color: #FFD42D;
+  }
 
-li:not(.active):hover {
-  background-color: #FFD42D;
-}
+  &:not(.active):hover {
+    background-color: #FFD42D;
+  }
 
-li.active::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 0px;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  border-left: 20px solid #FFD42D;
-  transition: right 0.25s ease-in;
-  animation-name: triangle-show;
-  animation-duration: 0.25s;
-  animation-delay: 0.4s;
-  animation-fill-mode: forwards;
-  z-index: -1;
-  opacity: 0;
-}
+  &.active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #FFD42D;
+    transition: right 0.25s ease-in;
+    animation-name: triangle-show;
+    animation-duration: 0.25s;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+    z-index: -1;
+    opacity: 0;
+  }
 
-li.no-click {
-  pointer-events: none;
-}
+  &.no-click {
+    pointer-events: none;
+  }
 
-li.no-triangle::after {
-  display: none;
+  &.no-triangle::after {
+    display: none;
+  }
 }
 
 @keyframes triangle-show {
   0% {
     right: 0px;
-    opacity: 100;
+    opacity: 1;
   }
   100% {
     right: -19px;
-    opacity: 100;
+    opacity: 1;
     z-index: 1;
   }
 }
 
 li i {
   font-size: 1.5em;
-  margin-bottom: 0.5em ;
+  margin-bottom: 0.5em;
 }
 
 li h4 {
