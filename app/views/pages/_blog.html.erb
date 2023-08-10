@@ -1,24 +1,23 @@
 <%= content_tag :div, id:"blog-content" do %>
 
-  <%= content_tag :div, id:"blog-title" do %>
-    <%= content_tag :h1, "Blog" %>
-    <%= content_tag :p, "MY TOUGHTS" %>
-  <% end %>
+    <%= content_tag :div, id:"blog-title" do %>
+      <%= content_tag :h1, "Skills" %>
+      <%= content_tag :p, "PARA TE AJUDAR" %>
+    <% end %>
 
-  <%= content_tag :div, class:"separator" do %> <% end %>
+    <%= content_tag :div, class:"separator" do %> <% end %>
 
-  <%= content_tag :div, class:"text-title" do %> <% end %>
+    <%= content_tag :div, class:"text-title uppercase" do %> <strong> Skills </strong> <% end %>
 
-  <%= content_tag :p,
-  "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit rem, nemo vitae, ducimus dolorum corporis iste iusto id beatae in quasi perspiciatis architecto quam ad qui. Hic, error reprehenderit vitae tempora, maxime excepturi repellendus sunt nisi eligendi corporis iure, rem nulla? Debitis accusantium repudiandae molestias quibusdam delectus dignissimos, eius enim quasi ducimus. Labore, recusandae quasi at reprehenderit sed earum architecto, perferendis accusamus ipsam vitae libero distinctio. A maxime quo nam iste beatae ipsam sit porro doloribus ipsa eaque tenetur temporibus autem cupiditate saepe, nisi excepturi laboriosam sint enim? Ex aperiam voluptatum assumenda, nam dignissimos voluptas deleniti iure eius fugit beatae.", class:"text-p" do %> <% end %>
+    <%= content_tag :div, id:"skills" do %>
 
-  <%= content_tag :p,
-  "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit rem, nemo vitae, ducimus dolorum corporis iste iusto id beatae in quasi perspiciatis architecto quam ad qui. Hic, error reprehenderit vitae tempora, maxime excepturi repellendus sunt nisi eligendi corporis iure, rem nulla? Debitis accusantium repudiandae molestias quibusdam delectus dignissimos, eius enim quasi ducimus. Labore, recusandae quasi at reprehenderit sed earum architecto, perferendis accusamus ipsam vitae libero distinctio. A maxime quo nam iste beatae ipsam sit porro doloribus ipsa eaque tenetur temporibus autem cupiditate saepe, nisi excepturi laboriosam sint enim? Ex aperiam voluptatum assumenda, nam dignissimos voluptas deleniti iure eius fugit beatae.", class:"text-p" %>
-
-    <%= content_tag :p,
-  "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit rem, nemo vitae, ducimus dolorum corporis iste iusto id beatae in quasi perspiciatis architecto quam ad qui. Hic, error reprehenderit vitae tempora, maxime excepturi repellendus sunt nisi eligendi corporis iure, rem nulla? Debitis accusantium repudiandae molestias quibusdam delectus dignissimos, eius enim quasi ducimus. Labore, recusandae quasi at reprehenderit sed earum architecto, perferendis accusamus ipsam vitae libero distinctio. A maxime quo nam iste beatae ipsam sit porro doloribus ipsa eaque tenetur temporibus autem cupiditate saepe, nisi excepturi laboriosam sint enim? Ex aperiam voluptatum assumenda, nam dignissimos voluptas deleniti iure eius fugit beatae.", class:"text-p" %>
-
-    <%= content_tag :p,
-  "   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit rem, nemo vitae, ducimus dolorum corporis iste iusto id beatae in quasi perspiciatis architecto quam ad qui. Hic, error reprehenderit vitae tempora, maxime excepturi repellendus sunt nisi eligendi corporis iure, rem nulla? Debitis accusantium repudiandae molestias quibusdam delectus dignissimos, eius enim quasi ducimus. Labore, recusandae quasi at reprehenderit sed earum architecto, perferendis accusamus ipsam vitae libero distinctio. A maxime quo nam iste beatae ipsam sit porro doloribus ipsa eaque tenetur temporibus autem cupiditate saepe, nisi excepturi laboriosam sint enim? Ex aperiam voluptatum assumenda, nam dignissimos voluptas deleniti iure eius fugit beatae.", class:"text-p" %>
+      <%= image_tag "html.png", class:"stacks", alt: "HTML" %>
+      <%= image_tag "css.png", class:"stacks", alt: "CSS" %>
+      <%= image_tag "js.png", class:"stacks", alt: "Javascript" %>
+      <%= image_tag "ruby.png", class:"stacks", alt: "Ruby" %>
+      <%= image_tag "rails.png", class:"stacks", alt: "Ruby on Rails" %>
+      <%= image_tag "git.png", class:"stacks", alt: "GIT" %>
+      <%= image_tag "bootstrap.png", class:"stacks", alt: "Bootstrap" %>
+    <% end %>
 
 <% end %>

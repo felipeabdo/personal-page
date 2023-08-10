@@ -1,39 +1,21 @@
-// // Função para ocultar todas as partials
-// function hideAllPartials() {
-//   const partials = document.querySelectorAll('#content-container > div');
-//   partials.forEach((partial) => {
-//     partial.style.display = 'none';
-//   });
-// }
+ // Obtenha todos os elementos <li> dentro da <ul>
+ var liItems = document.querySelectorAll('ul li');
 
-// // Função para adicionar classe "active" ao item da navbar clicado
-// function setActiveNavItem(navItem) {
-//   const navbarItems = document.querySelectorAll('#left ul li.nav-item');
-//   navbarItems.forEach((item) => {
-//     item.classList.remove('active');
-//   });
-//   navItem.classList.add('active');
-// }
+ // Adicione um manipulador de eventos de clique para cada <li>
+ liItems.forEach(function(li) {
+   li.addEventListener('click', function() {
+     // Remova a classe 'active' de todos os elementos <li>
+     liItems.forEach(function(li) {
+       li.classList.remove('activa');
+     });
 
-// // Função para exibir a partial correspondente ao item da navbar clicado
-// function showPartial(partialId) {
-//   const partialToShow = document.getElementById(partialId);
-//   partialToShow.style.display = 'block';
-// }
+     // Adicione a classe 'active' apenas ao elemento <li> clicado
+     li.classList.add('activa');
 
-// // Event listener para clique nos itens da navbar
-// const navbarItems = document.querySelectorAll('#left ul li.nav-item');
-// navbarItems.forEach((item) => {
-//   item.addEventListener('click', (event) => {
-//     const clickedNavItem = event.target.closest('li.nav-item');
-//     const partialId = clickedNavItem.classList[1];
+     // Obtenha o link <a> correspondente
+     var link = li.querySelector('a');
 
-//     hideAllPartials();
-//     setActiveNavItem(clickedNavItem);
-//     showPartial(partialId);
-//   });
-// });
-
-// // Exibir apenas a primeira partial inicialmente
-// const firstPartial = document.querySelector('#content-container > div');
-// firstPartial.style.display = 'block';
+     // Ative o link
+     link.click();
+   });
+ });

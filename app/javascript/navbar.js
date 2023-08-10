@@ -27,4 +27,3 @@ document.addEventListener("DOMContentLoaded", () => {
   const aboutLi = document.querySelector("aside#left ul li.about");
   aboutLi.classList.add("active");
 });
-

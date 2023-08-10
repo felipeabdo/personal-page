@@ -9,6 +9,7 @@ body {
 
 .content {
   display: flex;
+  flex-wrap: wrap;
   width: 990px;
   justify-content: center;
   flex-direction: column;
@@ -18,6 +19,8 @@ body {
   margin: 154px 0px;
   margin-left: 117px;
 }
+
+
 
 #content-container {
   display: flex;

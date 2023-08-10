@@ -3,6 +3,6 @@ import "@hotwired/turbo-rails"
 import "./controllers"
 
 import "./navbar"
-// import "./section"
+import "./section"
 
 console.log("Hello from app/javascript/application.js")
