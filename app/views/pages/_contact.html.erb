@@ -17,18 +17,35 @@
       <%= tag.p 'DF' %>
     <% end %>
 
-    <%= tag.div class: 'card' do %>
-      <%= content_tag :i, "", class: "fa-solid fa-mobile-screen-button" %>
-      <%= tag.h5 'Telefone' %>
-      <%= tag.p '(61 9 8629-6622)' %>
-      <%= tag.p 'Whatsapp' %>
+<%= tag.div class: 'card' do %>
+  <%= content_tag :i, "", class: "fa-solid fa-mobile-screen-button" %>
+  <%= tag.h5 'Telefone' %>
+
+  <%= link_to "https://contate.me/felipeabdo", target: "_blank", style: "text-decoration: none; color: #000; display: flex; align-items: flex-end;" do %>
+    <%= content_tag :p, style: "display: inline; margin-right: 10px; text-align: center;" do %>
+      <%= content_tag :i, "", class: "fa-brands fa-whatsapp", style: "color: #16c539; margin-right: 5px; position: relative; top: 2px; font-size: 1.2em; font-weight: bold;" %>
+      <%= tag.span '(61 9 8629-6622)' %>
     <% end %>
+  <% end %>
+<% end %>
+
+
+
 
     <%= tag.div class: 'card' do %>
       <%= content_tag :i, "", class: "fa-regular fa-envelope" %>
       <%= tag.h5 'Email' %>
-      <%= tag.p 'felipe.abdo.ti@gmail.com' %>
+
       <%= tag.p '' %>
+
+      <%= tag.p '' do %>
+        <%= link_to(mailto: "felipe.abdo.ti@gmail.com") do %>
+          <%= image_tag("gmail.png", class: "text-icons") %>
+            felipe.abdo.ti@gmail.com
+        <% end %>
+      <% end %>
+
+
     <% end %>
 
    <% end %>
