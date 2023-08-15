@@ -37,3 +37,7 @@ a {
   width: 24px;
   margin-bottom: 4px;
 }
+
+li:not(.active):hover {
+  background-color: #343a40;
+}
