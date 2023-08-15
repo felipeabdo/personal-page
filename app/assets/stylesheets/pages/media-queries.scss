@@ -617,6 +617,10 @@
     border-top: 15px solid #FFD42D;
     left: 29px;
   }
+
+  li:not(.active):hover {
+    background-color: #101010;
+  }
 }
 
 
