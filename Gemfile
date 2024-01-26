@@ -43,10 +43,10 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 # Use Sass to process CSS
-gem "sassc-rails"
+gem 'sassc-rails', '~> 2.1', '>= 2.1.2'
 
 # Use Font-Awsome
-gem "font-awesome-sass", "~> 6.1"
+gem 'font-awesome-sass', '~> 6.5', '>= 6.5.1'
 
 # Use Simple-Form
 gem "simple_form"
@@ -87,3 +87,5 @@ gem "dockerfile-rails", ">= 1.5", :group => :development
 gem "sentry-ruby", "~> 5.10"
 
 gem "sentry-rails", "~> 5.10"
+
+gem "pg", "~> 1.5"
